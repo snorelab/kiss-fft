@@ -59,10 +59,9 @@ public class KISSFastFourierTransformer {
 
         float[][] result = new float[2][input.length];
 
-        idx = 0;
         for (int i = 0; i < input.length; i++) {
-            result[0][i] = (float) ri[idx++];
-            result[1][i] = (float) ri[idx++];
+            result[0][i] = (float) ri[i * 2];
+            result[1][i] = (float) ri[(i * 2) + 1];
         }
         return result;
     }
